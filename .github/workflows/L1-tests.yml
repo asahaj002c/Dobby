@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # For CI, build all optional plugins. Newly developed plugins should be added to this list
+      # For CI, build all optional plugins. Newly developed plugins should be added to this list 
       optional_plugins: "-DPLUGIN_TESTPLUGIN=ON -DPLUGIN_GPU=ON -DPLUGIN_LOCALTIME=ON -DPLUGIN_RTSCHEDULING=ON -DPLUGIN_HTTPPROXY=ON -DPLUGIN_APPSERVICES=ON -DPLUGIN_IONMEMORY=ON -DPLUGIN_DEVICEMAPPER=ON -DPLUGIN_OOMCRASH=ON"
       optional_flags: "-DLEGACY_COMPONENTS=ON -DRDK=ON -DUSE_SYSTEMD=ON -DDOBBY_HIBERNATE_MEMCR_IMPL=ON"
       AUTOMATICS_UNAME: ${{ secrets.AUTOMATICS_UNAME}}
