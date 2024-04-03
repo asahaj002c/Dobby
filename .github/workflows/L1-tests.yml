@@ -114,5 +114,6 @@ jobs:
       - name: Publishing the artifacts to automatics
         if: ${{ matrix.extra_flags == 'RUN_TESTS' && matrix.build_type == 'Debug' }}
         run: >
+          chmod 777 $GITHUB_WORKSPACE/gtest-json-result-push.py
           git config --global --add safe.directory $GITHUB_WORKSPACE &&
           $GITHUB_WORKSPACE/gtest-json-result-push.py /tmp/Gtest_Report/ https://rdkeorchestrationservice.amw2-g2.cf.comcast.net/rdke_orchestration_api/push_unit_test_results $GITHUB_WORKSPACE
