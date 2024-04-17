@@ -116,4 +116,4 @@ jobs:
         run: >
           chmod 777 $GITHUB_WORKSPACE/gtest-json-result-push.py &&
           git config --global --add safe.directory $GITHUB_WORKSPACE &&
-          $GITHUB_WORKSPACE/gtest-json-result-push.py /tmp/Gtest_Report/ https://rdkautotool.ccp.xcal.tv/rdke_orchestration_api/push_unit_test_results $GITHUB_WORKSPACE
+          $GITHUB_WORKSPACE/gtest-json-result-push.py /tmp/Gtest_Report/ https://rdkeorchestrationservice.apps.cloud.comcast.net/rdke_orchestration_api/push_unit_test_results $GITHUB_WORKSPACE
