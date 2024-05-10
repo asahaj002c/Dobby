@@ -111,7 +111,7 @@ jobs:
             /tmp/Gtest_Report/DobbyManagerL1TestResults.json
           if-no-files-found: warn
 
-      - name: Publishing the artifacts to automatics
+      - name: Publishing the artifacts to automatics 
         if: ${{ matrix.extra_flags == 'RUN_TESTS' && matrix.build_type == 'Debug' }}
         run: >
           chmod 777 $GITHUB_WORKSPACE/gtest-json-result-push.py &&
